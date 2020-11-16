@@ -8,17 +8,22 @@
 
     {{-- app css --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    {{-- bluma css --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
 <body>
 
     <div id="app">
 
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
+        @include('layouts.header')
 
-        <router-view></router-view>
+        <div class="section">
+            <div class="container">
+                <router-view></router-view>
+            </div>
+        </div>
 
-        @yield('content')
     </div>
     
     {{-- app js --}}
