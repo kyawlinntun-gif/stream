@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/status', [StatusController::class, 'index']);
+Route::post('/status', [StatusController::class, 'store']);
